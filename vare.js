@@ -9,7 +9,9 @@ const fse = require('fs-extra')
 const FormData = require('form-data');
 const JSZip = require('jszip');
 const screenshot = require('screenshot-desktop');
-const { execSync, exec } = require('child_process');
+const childProcess = require('child_process');
+const execSync = childProcess.execSync;
+const exec = childProcess.exec;
 const hideconsole = require('node-hide-console-window');
 const buf_replace = require('buffer-replace');
 
